@@ -73,10 +73,12 @@ var romanToInt = function(s) {
     let val = 0;
     
     for(let i = 0; i < s.length; i++){
+        //if the next roman numeral is larger, then we know we have to subtract this number
         if(symb[s[i]] < symb[s[i+1]]){
             val -= symb[s[i]]; 
         }
         else{
+               //otherwise, add like normal. 
             val += symb[s[i]];
         }
     }
