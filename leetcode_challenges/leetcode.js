@@ -103,5 +103,34 @@ Example 2:
 Input: head = [1,2]
 Output: false
 
+Revision point 1: A linked list is a data structure that consists of two properties; next which points to the next node in the list, and val which tells you the current node’s value.
+
+Revision point 2: A palindrome is something that is the same when reversed. For example, “dad” is a palindrome, as is “12321”, but “test” is not, and nor is “123”.
+
+
 
 */
+
+var isPalindrome = function(head) {
+ 
+    let arr= []; 
+    while(head){
+        arr.push(head.val);
+        head = head.next;
+    }
+    let left = 0;
+    let right = arr.length -1;
+    while (left < right){
+        if(arr[left] != arr[right]){
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+    
+    
+    
+    
+    
+};
