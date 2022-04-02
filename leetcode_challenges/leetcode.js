@@ -112,18 +112,23 @@ Revision point 2: A palindrome is something that is the same when reversed. For 
 */
 
 var isPalindrome = function(head) {
- 
+
+
+  // Store all values from the linked list in an array
     let arr= []; 
     while(head){
         arr.push(head.val);
         head = head.next;
     }
+
+    // Check if the list of values are a palindrome
     let left = 0;
     let right = arr.length -1;
     while (left < right){
         if(arr[left] != arr[right]){
             return false;
         }
+        // if it's false then continue transvering. left --> right  <---
         left++;
         right--;
     }
