@@ -28,6 +28,7 @@ var twoSum = function(nums, target) {
     for(let i =0; i < nums.length; i++){
         for(let j = i +1; j < nums.length; j++){
             if(nums[i] + nums[j] == target){
+                // return the INDEX of i and j 
                return [i,j];
            }
         }
@@ -59,6 +60,7 @@ Given a roman numeral, convert it to an integer.
 */
 var romanToInt = function(s) {
     
+    // MAP all keys and val
     let symb = {
         "I" : 1,
         "V" : 5,
@@ -114,7 +116,7 @@ Revision point 2: A palindrome is something that is the same when reversed. For 
 var isPalindrome = function(head) {
 
 
-  // Store all values from the linked list in an array
+  // Store all values from the LINKED LIST in an array
     let arr= []; 
     while(head){
         arr.push(head.val);
