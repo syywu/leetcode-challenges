@@ -256,3 +256,22 @@ digits does not contain any leading 0's.
 
 
 */
+
+var plusOne = function(digits) {
+
+    //loop backwards to get to the last elem first and in the event of a carry on
+   for(let i = digits.length -1; i >= 0; i--){
+       if(digits[i] < 9){
+           digits[i]++;
+         return digits;
+            //do nothing further and return digits immediately
+       }
+       else{
+           //if digit is 9 then return 0
+               digits[i] = 0;
+           }
+   }
+    // add 1 to the beginning of an arr in the event of [9,9] ---> [1,0,0]
+    digits.unshift(1);
+    return digits;
+};
