@@ -260,6 +260,7 @@ digits does not contain any leading 0's.
 var plusOne = function(digits) {
 
     //loop backwards to get to the last elem first and in the event of a carry on
+    // digits.length -1 as we are looping through index
    for(let i = digits.length -1; i >= 0; i--){
        if(digits[i] < 9){
            digits[i]++;
