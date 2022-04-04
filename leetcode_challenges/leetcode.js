@@ -276,3 +276,23 @@ var plusOne = function(digits) {
     digits.unshift(1);
     return digits;
 };
+
+// solution 2
+
+const plusOne = (digits) => {
+    for(i=digits.length -1; i>=0; i--) {
+        digits[i]++;
+        // if digits is 10 then digits is 0
+        const takeOne = digits[i] === 10
+        if(takeOne) {
+            digits[i] = 0;
+            // if digit is 0 then add in to start of array
+            if(i === 0) {
+                digits.unshift(1);
+            }
+        } else {
+            break;
+        }
+    }
+    return digits;
+};
