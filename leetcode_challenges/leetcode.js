@@ -28,7 +28,7 @@ var twoSum = function(nums, target) {
     for(let i =0; i < nums.length; i++){
         for(let j = i +1; j < nums.length; j++){
             if(nums[i] + nums[j] == target){
-                // return the INDEX -i and j 
+                // return the INDEICES -i and j 
                return [i,j];
            }
         }
@@ -166,7 +166,32 @@ ransomNote and magazine consist of lowercase English letters.
 
 */
 
-// HASHMAP
+// OBJECT/HASHMAP
+
+var canConstruct = function(ransomNote, magazine) {
+    
+    //create an obj to keep count of letters of magazine
+    //  { key : character , value: countOfOccurrence};
+    let storage ={};
+    
+    //for loop to transverse down magazine
+    for(let i = 0; i < magazine.length; i++){
+        let magChar = magazine[i];
+        storage[magChar] = storage[magChar] || 0;
+        storage[magChar]++;
+        };
+    
+    //for loop to transverse through ransomNote
+    for(let j = 0; j < ransomNote.length; j++){
+        let ranChar = ransomNote[j];
+        if(!storage[ranChar]){
+            return false;
+            
+        }
+        storage[ranChar]--;
+    }
+    return true;
+};
 
 
 
