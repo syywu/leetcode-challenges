@@ -175,19 +175,21 @@ var canConstruct = function(ransomNote, magazine) {
     let storage ={};
     
     //for loop to transverse down magazine
+    // 1st: Create the Map with magazine's character occurrence and count.
     for(let i = 0; i < magazine.length; i++){
         let magChar = magazine[i];
         storage[magChar] = storage[magChar] || 0;
         storage[magChar]++;
         };
     
-    //for loop to transverse through ransomNote
+//for loop to transverse through ransomNote
+// 1. find values of ransom note's characters in the map        
     for(let j = 0; j < ransomNote.length; j++){
         let ranChar = ransomNote[j];
         if(!storage[ranChar]){
-            return false;
-            
+            return false;    
         }
+        // 2. Reduce the count of the character(key)'s value by 1
         storage[ranChar]--;
     }
     return true;
