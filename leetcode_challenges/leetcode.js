@@ -231,17 +231,24 @@ Constraints:
 1 <= heights.length <= 105
 1 <= heights[i] <= 109
 */
+function oceanView(heights){
+    //initialise an empty arr to store indicies
+    let myArray = [];
+    //initialise a var called nextBiggest which keep count of the next biggest building
+    let nextBiggest = 0; 
 
-function oceanView(buildings){
-
-    for(let i = 0
-    ; i < buildings.length; i++){
-        if(buildings[i] > building[i+1]){
-            return [i, i+1];
-        }
+    for(let i = heights.length -1; i >= 0; i--){
+      if(heights[i] > nextBiggest){
+        nextBiggest = heights[i];
+        myArray.push(i);  //[3,2,0]
+      }
     }
+    //reverse the arr so result would be in increasing order [0,2,3]
+    return myArray.reverse();
+  }
+  
+  console.log(oceanView([1,3,2,4]));
 
-}
 
 /* 
 66. Plus One
