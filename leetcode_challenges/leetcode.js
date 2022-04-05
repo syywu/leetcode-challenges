@@ -323,3 +323,23 @@ const plusOne = (digits) => {
     }
     return digits;
 };
+
+//solution 3
+
+function plusOne(digits){
+    for(let i = digits.length -1; i >= 0; i--){
+        digits[i]++;
+        if(digits < 10){
+            return digits; 
+        }
+        else{
+            //49
+            //if it's 9 then digits[i] is 0. 4 + 1 = 5. sice 5 is less than 10 it will return digits arr immediately
+            digits[i] = 0; 
+        }
+    }
+    //199
+    digits.unshift(1);
+    return digits;
+}
+
