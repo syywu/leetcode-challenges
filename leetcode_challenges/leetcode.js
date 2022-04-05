@@ -239,7 +239,7 @@ function oceanView(heights){
 
     for(let i = heights.length -1; i >= 0; i--){
       if(heights[i] > nextBiggest){
-        nextBiggest = heights[i];
+        nextBiggest = heights[i]; //if heights[i] is bigger than nextBiggest, the current val is the nextBiggest
         myArray.push(i);  //[3,2,0]
       }
     }
