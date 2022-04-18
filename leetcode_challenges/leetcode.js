@@ -380,7 +380,7 @@ var fizzBuzz = function(n) {
 
     // for loop to loop to the arg n
     for(let i = 1; i <= n; i++){
-    // FizzBuzz is first condition as otherwise it will never to get it
+    // FizzBuzz is first condition as otherwise it will never to get to it
     if (i % 3 === 0 && i % 5 === 0){
         arr.push("FizzBuzz");
     }
@@ -428,3 +428,10 @@ var fizzBuzz = function(n) {
 // Output: 12
  
 // Constraints: 0 <= num <= 106
+
+// 1672. Richest Customer Wealth
+
+// You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
+
+// A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
+
