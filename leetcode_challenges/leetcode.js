@@ -427,3 +427,4 @@ var fizzBuzz = function(n) {
 // Input: num = 123
 // Output: 12
  
+// Constraints: 0 <= num <= 106
