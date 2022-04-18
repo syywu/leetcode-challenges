@@ -375,18 +375,23 @@ function plusOne(digits){
 // Constraints: 1 <= n <= 104
 
 var fizzBuzz = function(n) {
+    // initialise an empty array
     let arr =[];
+
+    // for loop to loop to the arg n
     for(let i = 1; i <= n; i++){
+    // FizzBuzz is first condition as otherwise it will never to get it
     if (i % 3 === 0 && i % 5 === 0){
         arr.push("FizzBuzz");
     }
-      else if  (i % 3 === 0){
+      else if(i % 3 === 0){
        arr.push("Fizz");
     }
     else if(i % 5 === 0){
         arr.push('Buzz');
     }
     else{
+        // convert ith index to string
         arr.push(i.toString()); 
     }
     }
