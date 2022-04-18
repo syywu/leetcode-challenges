@@ -462,3 +462,18 @@ var fizzBuzz = function(n) {
 // n == accounts[i].length
 // 1 <= m, n <= 50
 // 1 <= accounts[i][j] <= 100
+
+var maximumWealth = function(accounts) {
+    let largest = 0;
+    for(let i = 0; i < accounts.length; i++){
+         let sum =0;
+        for (let j = 0; j < accounts[i].length; j++){
+           
+                sum += accounts[i][j];
+        }
+        if(sum > largest){
+                    largest = sum;
+                }
+    }
+    return largest; 
+};
