@@ -397,3 +397,4 @@ var fizzBuzz = function(n) {
     }
     return arr;
 };
+// !(i % 3) has the same meaning with (i % 3) == 0, as !(0) will be evaluated to true.
